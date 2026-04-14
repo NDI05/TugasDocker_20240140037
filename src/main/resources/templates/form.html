@@ -7,30 +7,30 @@
 </head>
 <body class="container mt-5">
     <div class="card p-4 shadow-sm">
-        <h2 class="mb-4">Form Input Mahasiswa [cite: 85]</h2>
+        <h2 class="mb-4">Form Input Mahasiswa</h2>
         <form th:action="@{/form}" th:object="${user}" method="post">
             <div class="mb-3">
-                <label class="form-label">Nama: [cite: 86]</label>
+                <label class="form-label">Nama:</label>
                 <input type="text" th:field="*{nama}" class="form-control" required>
             </div>
             <div class="mb-3">
-                <label class="form-label">NIM: [cite: 87]</label>
+                <label class="form-label">NIM:</label>
                 <input type="text" th:field="*{nim}" class="form-control" required>
             </div>
             <div class="mb-3">
-                <label class="form-label d-block">Jenis Kelamin: [cite: 88]</label>
+                <label class="form-label d-block">Jenis Kelamin:</label>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" th:field="*{jenisKelamin}" value="Laki-laki" id="laki" required>
-                    <label class="form-check-label" for="laki">Laki-laki [cite: 89]</label>
+                    <label class="form-check-label" for="laki">Laki-laki</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" th:field="*{jenisKelamin}" value="Perempuan" id="perempuan">
-                    <label class="form-check-label" for="perempuan">Perempuan [cite: 90]</label>
+                    <label class="form-check-label" for="perempuan">Perempuan </label>
                 </div>
             </div>
             <div class="mt-4">
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <a th:href="@{/home}" class="btn btn-link">Kembali ke Home [cite: 91]</a>
+                <a th:href="@{/home}" class="btn btn-link">Kembali ke Home </a>
             </div>
         </form>
     </div>

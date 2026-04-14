@@ -7,26 +7,26 @@
 </head>
 <body class="container mt-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2>MY Website 20240140037 [cite: 75]</h2>
-        <a th:href="@{/login}" class="btn btn-danger btn-sm">Logout [cite: 79]</a>
+        <h2>MY Website 20240140037</h2>
+        <a th:href="@{/login}" class="btn btn-danger btn-sm">Logout</a>
     </div>
 
     <div class="alert alert-info">
-        Selamat datang di aplikasi! [cite: 76]
+        Selamat datang di aplikasi!
     </div>
 
     <div class="mb-3">
-        <a th:href="@{/form}" class="btn btn-success">Input Data Mahasiswa [cite: 77]</a>
+        <a th:href="@{/form}" class="btn btn-success">Input Data Mahasiswa</a>
     </div>
 
-    <h4>Data Mahasiswa [cite: 78]</h4>
+    <h4>Data Mahasiswa</h4>
     <table class="table table-bordered table-striped">
         <thead class="table-light">
             <tr>
-                <th>No [cite: 80]</th>
-                <th>Nama [cite: 81]</th>
-                <th>NIM [cite: 82]</th>
-                <th>Jenis Kelamin [cite: 83]</th>
+                <th>No</th>
+                <th>Nama</th>
+                <th>NIM</th>
+                <th>Jenis Kelamin</th>
             </tr>
         </thead>
         <tbody>
@@ -37,7 +37,7 @@
                 <td th:text="${user.jenisKelamin}">Laki-laki</td>
             </tr>
             <tr th:if="${#lists.isEmpty(users)}">
-                <td colspan="4" class="text-center text-muted">Belum ada data [cite: 84]</td>
+                <td colspan="4" class="text-center text-muted">Belum ada data</td>
             </tr>
         </tbody>
     </table>
