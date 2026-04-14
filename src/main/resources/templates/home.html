@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - MY Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>MY Website 20240140037 [cite: 75]</h2>
+        <a th:href="@{/login}" class="btn btn-danger btn-sm">Logout [cite: 79]</a>
+    </div>
+
+    <div class="alert alert-info">
+        Selamat datang di aplikasi! [cite: 76]
+    </div>
+
+    <div class="mb-3">
+        <a th:href="@{/form}" class="btn btn-success">Input Data Mahasiswa [cite: 77]</a>
+    </div>
+
+    <h4>Data Mahasiswa [cite: 78]</h4>
+    <table class="table table-bordered table-striped">
+        <thead class="table-light">
+            <tr>
+                <th>No [cite: 80]</th>
+                <th>Nama [cite: 81]</th>
+                <th>NIM [cite: 82]</th>
+                <th>Jenis Kelamin [cite: 83]</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="user, iterStat : ${users}">
+                <td th:text="${iterStat.count}">1</td>
+                <td th:text="${user.nama}">Ardian Mulya</td>
+                <td th:text="${user.nim}">20210140019</td>
+                <td th:text="${user.jenisKelamin}">Laki-laki</td>
+            </tr>
+            <tr th:if="${#lists.isEmpty(users)}">
+                <td colspan="4" class="text-center text-muted">Belum ada data [cite: 84]</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
